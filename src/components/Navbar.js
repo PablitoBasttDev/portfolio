@@ -1,6 +1,7 @@
 import React from "react"
 import './Navbar.css'
 import { useState } from "react"
+import {animated, useSpring} from 'react-spring'
 
 const Navbar = () => {
     const [activeLink, setActiveLink] = useState('home')
@@ -9,10 +10,12 @@ const Navbar = () => {
         setActiveLink(link)
     }
 
+    const fadeIn = useSpring({ opacity: 1, transform: 'translateY(0)', from: { opacity: 0, transform: 'translateY(-50px)' }, config: {duration: 800} })
+
     return(
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <animated.nav style={fadeIn} className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
-                <a className="navbar-brand" href="#">PablitoBastt<span>Dev</span></a>
+                <a className="navbar-brand" href="#"  onClick={() => handleClick('home')}>PablitoBastt<span>Dev</span></a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -38,7 +41,7 @@ const Navbar = () => {
                 <button className='button-contact' href='#'>Contact Me!</button>
                 </div>
             </div>
-        </nav>
+        </animated.nav>
     )
 }
 
