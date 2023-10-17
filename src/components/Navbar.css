@@ -1,6 +1,38 @@
 nav.navbar.navbar-expand-lg.bg-body-tertiary{
     background-color: transparent !important;
+    position: absolute;
+    top:0;
+    width: 100%;
+    transition: background-color 0.5s ease-in-out;
 }
+
+nav.navbar.navbar-expand-lg.bg-body-tertiary.navbar-fixed{
+    position: fixed;
+    top: 0;
+    background-color: #222 !important;
+    width: 100%;
+}
+
+.collapse.navbar-collapse.show{
+    display: flex;
+    flex-direction: row;
+    margin-left: 25px;
+}
+
+.collapse.navbar-collapse.show ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.collapse.navbar-collapse.show ul li{
+    padding: 0 10px;
+}
+
+.collapse.navbar-collapse.show button{
+    margin-right:0;
+    margin-left: 20px;
+}
+
 .container-fluid a.navbar-brand{
     color: var(--base-color);
     font-size: 24px;
@@ -15,7 +47,7 @@ nav.navbar.navbar-expand-lg.bg-body-tertiary{
 }
 
 .container-fluid .collapse{
-    margin-left: 50px;
+    margin-left: 15px;
 }
 .navbar-toggler{
     background-color: var(--base-color)!important;
@@ -144,3 +176,42 @@ ul li a:hover::before {
     -webkit-transition: all 0.35s;
     transition: all 0.35s;
   }
+
+  @media (max-width: 800px){
+    .navbar-collapse.collapse.show ul li{
+        padding: 0;
+    }
+    .navbar-collapse.collapse.show ul li a{ 
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+    .navbar-collapse.collapse.show span div a i{
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+    .navbar-collapse.collapse.show button{
+       padding: 6px 12px;
+    }
+}
+
+@media (max-width: 600px){
+    .navbar-collapse.collapse.show{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .navbar-collapse.collapse.show ul li a{ 
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+    .navbar-collapse.collapse.show span div a i{
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+    }
+    .navbar-collapse.collapse.show button{
+       padding: 6px 12px;
+       font-size: 14px;
+       margin-left: 5px;
+    }
+}

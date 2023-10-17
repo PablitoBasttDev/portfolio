@@ -11,9 +11,14 @@
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   background-color: #222 !important;
   color: #000 !important;
   font-family: 'Urbanist', sans-serif; 
   font-weight: normal;
+  scroll-behavior: smooth;
 }

@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
     text-align: center;
     z-index: -1;
 }
@@ -44,9 +44,14 @@ section.banner div.container-fluid{
     justify-content: center;
     flex-wrap: no-wrap;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 64px;
+    font-size: clamp(40px,5vw,64px);
     font-weight: 500;
     color: #fff;
+}
+
+.tracking-in-expand {
+	animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation-delay: 1000ms;
 }
 
 .title-banner span:hover{
@@ -63,7 +68,7 @@ section.banner div.container-fluid{
     justify-content: center;
     color: var(--main-color);
     font-weight: 700;
-    font-size: 40px;
+    font-size: clamp(24px,3vw,40px);
 }
 
 .description{
@@ -71,21 +76,23 @@ section.banner div.container-fluid{
     justify-content: center;
     margin-top: 50px;
     color: #fff;
-    font-size: 24px;
+    font-size: clamp(18px, 2.5vw, 24px);
 }
 
 img {
     top:0;
 }
 
-@media (max-width: 800px){
-    .title-banner {
-        font-size: 50px;
-    }  
-    .subtitle{
-        font-size: 24px;
+@keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
     }
-    .description{
-        font-size: 18px;
+    40% {
+      opacity: 0.6;
     }
-}
+    100% {
+      opacity: 1;
+    }
+  }
+  

@@ -1,0 +1,91 @@
+:root{
+    --i: 0;
+}
+
+#skills.container-fluid{
+    margin-top: 95vh;
+    width: 70%;
+    height: auto;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    background: #333;
+    box-shadow: 0px 5px 10px 0px #000;
+    row-gap: 50px;
+}
+
+.col-xl-12{
+    display: flex;
+    justify-content: center;
+}
+
+.col-xl-12 h3{
+    text-align: center;
+    padding: 50px;
+    margin-top: 10px;
+    width: 80%;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    border-bottom: 1px solid #fff;
+}
+
+div .row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+
+@media (max-width: 1300px){
+    .container-progress .progress-bar{
+        width: 150px;
+        height: 150px;
+        font-size: 0.8em;
+    }
+    .container-progress .progress-bar::after{
+        inset: 10px;
+    }
+    #skills.container-fluid{
+        row-gap: 20px;
+    }
+}
+
+@media (max-width: 800px){
+    .col-xl-12 h3 {
+        font-size: 36px;
+    }  
+    .container-progress .progress-bar{
+        width: 120px;
+        height: 120px;
+        font-size: .6em;
+    }
+    .container-progress .progress-bar::after{
+        inset: 7px;
+    }
+    #skills.container-fluid{
+        row-gap: 0px;
+    }
+}
+
+@media (max-width: 600px){
+    .col-xl-12 h3 {
+        font-size: 30px;
+        padding: 30px;
+    }  
+    .container-progress .progress-bar{
+        width: 75px;
+        height: 75px;
+        font-size: .4em;
+    }
+    .container-progress .progress-bar::after{
+        inset: 5px;
+    }
+    #skills.container-fluid{
+        row-gap: 0px;
+    }
+}

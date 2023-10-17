@@ -1,19 +1,36 @@
 import React from "react"
 import './Navbar.css'
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import {animated, useSpring} from 'react-spring'
 
 const Navbar = () => {
     const [activeLink, setActiveLink] = useState('home')
-     
+    const [isFixed, setIsFixed] = useState(false);
+    
     const handleClick = (link) => {
         setActiveLink(link)
     }
 
-    const fadeIn = useSpring({ opacity: 1, transform: 'translateY(0)', from: { opacity: 0, transform: 'translateY(-50px)' }, config: {duration: 800} })
+    useEffect(()=>{
+        const handleScroll = () => {
+            if (window.scrollY > 25){
+                setIsFixed(true)
+            } else{
+                setIsFixed(false)
+            }
+        };
 
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [])
+
+    const fadeIn = useSpring({ opacity: 1, transform: 'translateY(0)', from: { opacity: 0, transform: 'translateY(-50px)' }, config: {duration: 800} })
+    const navbarClass = isFixed ? 'navbar-fixed' : '';
+ 
     return(
-        <animated.nav style={fadeIn} className="navbar navbar-expand-lg bg-body-tertiary">
+        <animated.nav style={fadeIn} className={`navbar navbar-expand-lg bg-body-tertiary ${navbarClass}`}>
             <div className="container-fluid">
                 <a className="navbar-brand" href="#"  onClick={() => handleClick('home')}>PablitoBastt<span>Dev</span></a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
