@@ -1,0 +1,59 @@
+.projects-container{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    height: auto;
+    margin-top: 5vw;
+    padding-top: 20px;
+    padding-bottom: 8%;
+    z-index: 2;
+    color: #fff;
+    border-radius: 30px;
+    box-shadow: inset 0px 0px 8px #111;
+}
+
+.projects-container h3{
+    text-align: center;
+    width: 80%;
+    height: auto;
+    padding: 50px;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    border-bottom: 1px solid #fff;
+}
+
+.grid-projects{
+    margin-top: 5%;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 5%;
+    justify-items: center;
+    align-items: center;
+}
+
+
+@media (max-width: 800px){
+    .projects-container h3 {
+        font-size: 36px;
+    }  
+}
+
+@media (max-width: 600px){
+    .projects-container h3 {
+        font-size: 30px;
+        padding: 30px;
+
+    }  
+    .projects-container{
+        width: 90%;
+    }
+}

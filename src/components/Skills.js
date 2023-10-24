@@ -1,7 +1,6 @@
 import './Skills.css'
 import React from 'react'
 import SkillPercent from './SkillPercent'
-import { useInView } from 'react-intersection-observer'
 
 const Skills = () => {
 
@@ -10,11 +9,11 @@ const Skills = () => {
         CSS: 95,
         JAVASCRIPT: 80,
         REACTJS: 80,
-        ALGORITHMS: 90,
+        LOGIC: 90,
         DESIGN: 75
     }
 
-    const SKILLS = ['HTML', 'CSS', 'JAVASCRIPT', 'REACTJS', 'ALGORITHMS', 'DESIGN']
+    const SKILLS = ['HTML', 'CSS', 'JAVASCRIPT', 'REACTJS', 'LOGIC', 'DESIGN']
 
     return(
         <section id='skills' className='container-fluid'>

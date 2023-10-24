@@ -1,6 +1,8 @@
 import React from 'react'
 import './SkillPercent.css'
 import {useState, useEffect} from 'react'
+import { useInView } from 'react-intersection-observer'
+
 
 const SkillPercent = (props) => {
 
@@ -8,27 +10,30 @@ const SkillPercent = (props) => {
     const skill = props.skill;
 
     const [currentPercent, setCurrentPercent] = useState(0);
+    const [ref, inView] = useInView({
+        triggerOnce: true
+    })
     
     let interval;
 
     useEffect(()=>{
-        if (currentPercent < percent) {
+        if (currentPercent < percent && inView) {
             interval = setInterval(() => {
                 setCurrentPercent((prevPercent) => prevPercent + 1);
-            }, 20);
+            }, 30);
         }
 
         return () => {
             clearInterval(interval);
         };
 
-    },[percent,currentPercent])
+    },[percent,currentPercent, inView])
 
     return (
-        <div className='col-4'>
+        <div className='col-4' ref={ref}>
             <div className='container-progress'>
-                <div className='progress-bar' style={{background: `conic-gradient(var(--main-color) ${currentPercent*3.6}deg, #444 0deg)`}}>
-                    <h3 className='progress-value'>{`${percent}%`}</h3>
+                <div className='progress-bar' style={{background: `conic-gradient(var(--main-color) ${currentPercent*3.6}deg, #333 0deg)`}}>
+                    <h3 className='progress-value'>{`${currentPercent}%`}</h3>
                     <h4>{skill}</h4>
                 </div>
             </div>

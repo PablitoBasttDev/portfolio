@@ -12,7 +12,8 @@
     justify-content: center;
     color: #fff;
     background: #333;
-    box-shadow: 0px 5px 10px 0px #000;
+    box-shadow: inset 0px 3px 10px #666,
+    0px 3px 10px #111 ;
     row-gap: 50px;
 }
 
@@ -35,7 +36,7 @@
 
 div .row{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     padding-bottom: 50px;
 }
@@ -87,5 +88,6 @@ div .row{
     }
     #skills.container-fluid{
         row-gap: 0px;
+        width: 90%;
     }
 }

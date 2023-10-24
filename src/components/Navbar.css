@@ -11,6 +11,7 @@ nav.navbar.navbar-expand-lg.bg-body-tertiary.navbar-fixed{
     top: 0;
     background-color: #222 !important;
     width: 100%;
+    z-index: 3;
 }
 
 .collapse.navbar-collapse.show{
@@ -198,11 +199,13 @@ ul li a:hover::before {
 @media (max-width: 600px){
     .navbar-collapse.collapse.show{
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: end;
     }
     .navbar-collapse.collapse.show ul li a{ 
         font-size: 12px;
         letter-spacing: 2px;
+        padding: 0;
+        margin: 0 10px;
     }
     .navbar-collapse.collapse.show span div a i{
         width: 28px;
