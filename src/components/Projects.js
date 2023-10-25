@@ -50,18 +50,20 @@ const Projects = () => {
     ]
     
     return (
-        <section className='projects-container' id='projects'>
-            <h3>PROJECTS</h3>
-            <div className='grid-projects'>
-                {projects.map((e,i) => 
-                    <ProjectCard 
-                        key = {i}
-                        url={e.url}
-                        description={e.description}
-                        imgUrl={e.imgUrl}
-                        title={e.title}
-                    />
-                )}
+        <section className='projects' id='projects'>
+            <div className='projects-container'>
+                <h3>PROJECTS</h3>
+                <div className='grid-projects'>
+                    {projects.map((e,i) => 
+                        <ProjectCard 
+                            key = {i}
+                            url={e.url}
+                            description={e.description}
+                            imgUrl={e.imgUrl}
+                            title={e.title}
+                        />
+                    )}
+                </div>
             </div>
         </section>
     )
