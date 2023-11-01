@@ -39,13 +39,13 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarText">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                        <a className={`nav-link ${activeLink === 'home' ? 'active' : ''}`} id='home-link' aria-current="page" href="#" onClick={() => handleClick('home')}>Home</a>
+                        <a className={`nav-link ${activeLink === 'home' ? 'active' : ''}`} id='home-link' aria-current="page" href="#" onClick={() => handleClick('home')}>Inicio</a>
                     </li>
                     <li className="nav-item">
                         <a className={`nav-link ${activeLink === 'skills' ? 'active' : ''}`} id='skills-link' href="#skills" onClick={() => handleClick('skills')}>Skills</a>
                     </li>
                     <li className="nav-item">
-                        <a className={`nav-link ${activeLink === 'projects' ? 'active' : ''}`} id='projects-link' href="#projects" onClick={() => handleClick('projects')}>Projects</a>
+                        <a className={`nav-link ${activeLink === 'projects' ? 'active' : ''}`} id='projects-link' href="#projects" onClick={() => handleClick('projects')}>Proyectos</a>
                     </li>
                 </ul>
                 <span className="navbar-text">
@@ -55,7 +55,7 @@ const Navbar = () => {
                         <a href='https://www.linkedin.com/in/giordano-pablo/'><i className="fa-brands fa-linkedin"></i></a>
                     </div>
                 </span>
-                <button className='button-contact' href='#'>Contact Me!</button>
+                <a className='button-contact' href='#contact'>Contact Me!</a>
                 </div>
             </div>
         </animated.nav>

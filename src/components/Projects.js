@@ -50,8 +50,8 @@ const Projects = () => {
     ]
     
     return (
-        <section className='projects' id='projects'>
-            <div className='projects-container'>
+        <section className='projects'>
+            <div className='projects-container'  id='projects'>
                 <h3>PROJECTS</h3>
                 <div className='grid-projects'>
                     {projects.map((e,i) => 

@@ -12,10 +12,10 @@ const Banner = () =>{
                 <div className='row'>
                     <div className='col-12'>
                         <h1 className='title-banner tracking-in-expand'>
-                            Hi, I'm Pablo Giordano
+                            Hola, soy Pablo Giordano
                         </h1>
                         <animated.h3 className='subtitle' style={fadeIn}>
-                            Front-End Developer
+                            Desarrollador Front-End
                         </animated.h3>
                     </div>
                 <div className='row'>

@@ -1,0 +1,40 @@
+.container-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0px 50px;
+    margin-top: 3%;
+    color: var(--main-color)
+}
+
+.container-footer p.navbar-brand{
+    color: var(--base-color);
+    font-size: 24px;
+}
+
+.container-footer p span{
+    color: var(--main-color);
+    font-weight: 700;
+}
+
+.container-footer div{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.container-footer .social-icon{
+    flex-direction: row;
+    padding: 10px;
+}
+
+.develop p {
+    font-size: 16px;
+}  
+
+@media (max-width: 600px){
+    .develop p {
+        font-size: 10px;
+    }  
+}
