@@ -22,7 +22,10 @@ const Banner = () =>{
                     <div className='col-xl-3 col-md-2'></div>
                     <div className='col-xl-6 col-md-8'>
                         <animated.p className='description' style={fadeIn}>
-                            Ea enim laboris consequat tempor eu duis. Pariatur occaecat mollit labore irure Lorem laboris exercitation magna. Veniam nulla qui magna reprehenderit consectetur aliqua esse voluptate veniam Lorem aliquip ut sint. Aute quis ipsum ipsum anim do minim dolor aliqua nulla officia amet Lorem irure incididunt. Aute eu pariatur veniam irure id commodo.
+                        Soy un estudiante en busca de empleo y con ánimos de dar sus primeros pasos en el mundo laboral. 
+                        Poseeo habilidades en programación, diseño de interfaces de usuario y sólidos conocimientos de lógica.  
+                        Soy una persona positiva, comprometida y responsable. 
+                        Este es mi portfolio personal desarrollado con React.js.
                         </animated.p>
                     </div>
                     <div className='col-xl-3 col-md-2'></div>
