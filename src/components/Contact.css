@@ -126,6 +126,10 @@ p.success{
 }
 
 @media (max-width: 600px){
+    #contact{
+        margin-top: 7%;
+    }
+
     .container h3 {
         font-size: 30px;
     }  

@@ -35,6 +35,10 @@
 
 @media (max-width: 600px){
     .develop p {
-        font-size: 10px;
+        font-size: 8px;
     }  
+
+    .container-footer p.navbar-brand{
+        font-size: 16px;
+    }
 }
